@@ -179,19 +179,25 @@ class Poll(Object, Update):
         chosen_option = None
         correct_option_id = None
         options = []
+        correct=None
 
         for i, result in enumerate(results):
+        	
             if result.chosen:
                 chosen_option = i
+                
 
             if result.correct:
                 correct_option_id = i
+                correct = i
 
             options.append(
                 types.PollOption(
                     text="",
                     voter_count=result.voters,
                     data=result.option,
+                    exp=media_poll.results.solution,
+                    correct=correct,
                     client=client
                 )
             )

@@ -209,6 +209,6 @@ class Poll(Object, Update):
             is_closed=False,
             chosen_option=chosen_option,
             correct_option_id=correct_option_id,
-            correct=correct,
+            
             client=client
         )

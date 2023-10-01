@@ -197,7 +197,7 @@ class Poll(Object, Update):
                     voter_count=result.voters,
                     data=result.option,
                     exp=media_poll.results.solution,
-                    correct=correct,
+                    
                     client=client
                 )
             )

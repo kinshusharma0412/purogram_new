@@ -43,6 +43,7 @@ class PollOption(Object):
         voter_count: int,
         data: bytes,
         correct_option_id: bool = None,
+        correct: bool = None,
         exp: str
         
     ):
@@ -52,4 +53,6 @@ class PollOption(Object):
         self.voter_count = voter_count
         self.correct_option_id = correct_option_id
         self.exp = exp
+        self.correct=correct
         self.data = data
+        

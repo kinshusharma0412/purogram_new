@@ -142,6 +142,7 @@ class Poll(Object, Update):
                 types.PollOption(
                     text=answer.text,
                     voter_count=voter_count,
+                    correct=correct,
                     exp=media_poll.results.solution,
                     data=answer.option,
                     client=client
